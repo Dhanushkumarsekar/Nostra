@@ -1,0 +1,172 @@
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f9f9f9;color:#222;transition:background 0.3s,color 0.3s;}
+
+/* Glassmorphism Navbar + Footer */
+.glass{background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 50px;position:sticky;top:0;z-index:1000;}
+.navbar a{color:#fff;margin:0 15px;text-decoration:none;transition:0.3s;}
+.navbar a.active{color:#ff4c29;text-shadow:0 0 10px #ff4c29;}
+#darkToggle{background:none;border:none;font-size:20px;cursor:pointer;color:#fff;}
+
+/* Hero */
+.hero{height:90vh;display:flex;align-items:center;justify-content:center;
+  background:url('assets/bg.jpg') center/cover;position:relative;color:#fff;text-align:center;overflow:hidden;}
+.hero::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);}
+.hero-content{position:relative;z-index:1;animation:fadeUp 2s ease-in-out;}
+.hero h2{font-size:3rem;}
+.hero p{margin-top:10px;font-size:1.2rem;}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(40px);}100%{opacity:1;transform:translateY(0);}}
+
+/* Buttons */
+.btn{display:inline-block;margin-top:20px;padding:12px 25px;
+  background:#ff4c29;color:#fff;border:none;border-radius:30px;
+  transition:0.3s;cursor:pointer;}
+.btn:hover{transform:scale(1.1);box-shadow:0 0 15px #ff4c29;}
+.glow{box-shadow:0 0 15px #ff4c29;}
+
+/* Grid Products */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;padding:50px;}
+.card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.15);
+  text-align:center;transform-style:preserve-3d;transition:transform 0.6s;}
+.card:hover{transform:rotateY(15deg) rotateX(5deg) scale(1.05);}
+.card img{width:100%;border-radius:12px;}
+.card h3{margin-top:10px;font-size:1.2rem;}
+.card p{color:#ff4c29;font-weight:bold;}
+
+/* Controls */
+.controls{display:flex;justify-content:center;gap:15px;padding:20px;}
+.controls input,.controls select{padding:10px;border-radius:8px;border:1px solid #aaa;width:200px;}
+
+/* Contact */
+.contact{padding:50px;text-align:center;}
+.contact form{display:flex;flex-direction:column;max-width:400px;margin:auto;}
+.contact input,.contact textarea{margin:10px 0;padding:12px;border:1px solid #ccc;border-radius:10px;}
+.socials{margin-top:20px;}
+.socials a{color:#ff4c29;text-decoration:none;margin:0 10px;}
+.socials a:hover{text-decoration:underline;}
+
+/* Footer */
+footer{color:#fff;text-align:center;padding:20px;}
+
+/* Dark Mode */
+body.dark{background:#121212;color:#eee;}
+body.dark .card{background:#1e1e1e;}
+body.dark .navbar a{color:#eee;}
+
+/* General image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Subtle 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Specific for product images in collections */
+.product-card img {
+  width: 220px;   /* Reduced fixed size */
+  height: 280px;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
+
+/* Hero section images (Home Page) */
+.hero img {
+  width: 70%;  /* Reduce hero image size */
+  max-height: 400px;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
+
+/* Default: Dark Mode */
+body {
+  background-color: #121212;
+  color: #f5f5f5;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode Styles (when body has .light-mode) */
+body.light-mode {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.light-mode nav {
+  background: #f5f5f5;
+  color: #111;
+}
+
+body.light-mode nav a {
+  color: #111;
+}
+
+body.light-mode .product-card {
+  background: #ffffff;
+  color: #111;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+body.light-mode form input,
+body.light-mode form textarea {
+  background: #f9f9f9;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+/* Toggle Button */
+#theme-toggle {
+  margin-left: 20px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  transition: background 0.5s;
+}
+
+#theme-toggle:hover {
+  background: #000000;
+}
+
+/* Apply Google Fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212; /* default dark mode */
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Paragraphs & Links */
+p, a, li, span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Buttons */
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

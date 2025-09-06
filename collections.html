@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostra - Collections</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="navbar glass">
+    <h1 class="logo">Nostra</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collections.html" class="active">Collections</a>
+      <a href="contact.html">Contact</a>
+      <button id="theme-toggle">🌙 Dark</button>
+
+    </nav>
+    
+  </header>
+
+  <!-- Search & Filter -->
+  <section class="controls">
+    <input type="text" id="searchBox" placeholder="🔍 Search products...">
+    <select id="filterCategory">
+      <option value="all">All</option>
+      <option value="shoes">Shoes</option>
+      <option value="watches">Watches</option>
+      <option value="jackets">Jackets</option>
+    </select>
+  </section>
+
+  <!-- Products -->
+  <section class="grid" id="productList">
+    <div class="card" data-category="shoes">
+      <img src="assets\Images\shopping.webp" alt="Shoe">
+      <h3>Air Zoom</h3>
+      <p>₹4,999</p>
+    </div>
+    <div class="card" data-category="watches">
+      <img src="assets\Images\watch.webp" alt="Watch">
+      <h3>Smart Watch</h3>
+      <p>₹7,499</p>
+    </div>
+    <div class="card" data-category="jackets">
+      <img src="assets\Images\jacket.webp" alt="Jacket">
+      <h3>Leather Jacket</h3>
+      <p>₹3,999</p>
+    </div>
+  </section>
+
+  <footer class="glass">
+    <p>© <span id="year"></span> Nostra | Built by <b>Dhanushkumar Sekar</b></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
